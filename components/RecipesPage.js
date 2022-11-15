@@ -30,10 +30,18 @@ app.component('recipes-page', {
             selectedFilter: 'breakfast lunch dinner',
         }
     },
+    mounted() {
+        this.recipesList = this.sortRecipes();
+    },
     methods: {
         getMeal(title) {
             const currMeal = this.meals.find((meal) => meal.title === title);
             return currMeal.name;
+        },
+        sortRecipes() {
+            return [...this.recipesList].sort((recipe1, recipe2) => { 
+                return recipe1.title?.localeCompare(recipe2.title) 
+            });
         },
     },
     computed: {
