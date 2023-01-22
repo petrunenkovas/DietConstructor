@@ -1,7 +1,8 @@
 const app = Vue.createApp({
     template: 
     /*html*/
-    `<nav>
+    `<div class="mainpage">
+    <nav>
         <button @click="showForm">Рассчитать дневной калораж</button>
         <button @click="createMenu">Составить меню на неделю</button>
         <button @click="showRecipes">Посмотреть список рецептов</button>
@@ -9,7 +10,8 @@ const app = Vue.createApp({
     <dailycalories-form @countCalories="setCalories" v-if="isShownForm" @close="closeModal"></dailycalories-form>
     <menu-constructor :menu="menu" :dailyCalories="dailyCalories" v-if="isShownMenu" @showRecipe="showRecipe"></menu-constructor>
     <recipe-dialog v-if="isShowRecipe" :recipe="recipe" @close="closeModal"></recipe-dialog>
-    <recipes-page v-if="isShownRecipes"></recipes-page>`,
+    <recipes-page v-if="isShownRecipes"></recipes-page>
+    </div>`,
     data() {
         return {
             dailyCalories: 0,

@@ -147,7 +147,7 @@ button:hover, button:focus, .currentFilter {
 }
 
 @media (min-width: 1024px)  {
-    #app {
+    .mainpage {
         width: 100%;
       max-width: 1000px;
   
