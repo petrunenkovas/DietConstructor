@@ -3,7 +3,7 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-input, select, button, router-link {
+input, select, button {
     text-align: center;
     border-radius: 5px;
     border: 1px solid teal;
@@ -83,7 +83,7 @@ h3 {
     cursor: pointer;
 }
 
-button:hover, button:focus, router-link:hover, router-link:focus {
+button:hover, button:focus, .currentFilter {
     background-color:steelblue;
     cursor: pointer;
 }
@@ -141,4 +141,17 @@ button:hover, button:focus, router-link:hover, router-link:focus {
       
       position: relative;
     }
+.recipe {
+    margin: auto;
+    margin-bottom: 30px;
+}
+.filter {
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.recipeMeal {
+    padding: 0;
+    margin: 0;
 }
